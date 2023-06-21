@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    width: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    width: 100%;
+    /* height: 10vh; */
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: rgb(75, 75, 221);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+section nav .logo h1{
+    /* height: 40px; */
+    cursor: pointer;
+    margin: 15px 0px;
+    color: white;
+    font-size: 25px;
+}
+section nav .logo h1:hover{
+    color: #fa1d86;
+}
+section nav .logo h1 a{
+    height: 40px;
+    cursor: pointer;
+    margin: 15px 0px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+section nav .logo h1 a:hover{
+    color: #fa1d86;
+}
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fa1d86;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color:  #fa1d86;
+    font-weight: bold;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: white;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover{
+    color: #fa1d86;
+    font-size: 25px;
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(75, 75, 221);
+    min-width: 160px;
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+   /* Style the links inside the dropdown */
+   .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-decoration: none;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color:rgb(56, 56, 56);
+    text-decoration: none;
+  }
+
+
+ /* The main css code for home page starts here */
+ 
+  
+  .hero {
+    background-image: url('https://images.unsplash.com/photo-1595134561159-11a5fbf6b3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1329&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+    padding: 100px;
+    padding-top: 300px;
+    background-color: #d2d2d2;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    
+  }
+  
+
+  
+  .btn {
+    background-color: rgb(75, 75, 221);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid white;
+  }
+  
+  .btn:hover {
+    background-color:#fa1d86;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .side1{
+    width: 50px;
+    position: fixed;
+  }
+  .side1 a{
+    /* margin-left: 0; */
+    /* margin-top: 100px; */
+
+  }
+
+/*Courses section in Home page */
+
+.courses1{
+    width: 100%;
+    padding: 70px 0;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.courses1 h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.courses1 h1 span{
+    color: #fa1d86;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.courses1 h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background:#fa1d86;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.courses1 .course_box{
+    width: 90%;
+    /* margin: 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.courses1 .course_box .course_card{
+    width: 325px;
+    height: 500px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.courses1 .course_box .course_card .course_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.courses1 .course_box .course_card .course_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.courses1 .course_box .course_card .course_image:hover img{
+    transform: scale(1.1);
+}
+
+
+.courses1 .course_box .course_card .course_info h2{
+    width: 100%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color:#fa1d86;
+}
+
+.courses1 .course_box .course_card .course_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.courses1 .course_box .course_card .course_info h3{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.courses1 .course_box .course_card .course_info .course_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #000;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+    margin-top: 10px;
+    
+}
+.courses1 .course_box .course_card .course_info .course_btn:hover{
+    background-color: #fa1d86;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+
+/*Contact Us Section*/
+
+
+
+.contact1{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    background-image: url(image/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 100px;
+}
+
+.contact1 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 55px;
+}
+
+.contact1 h1 span{
+    color: #fa1d86;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.contact1 h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fa1d86;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.contact1 .contact_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact1 .contact_main .contact_image img{
+    width: 600px;
+    opacity:0.7 ;
+}
+
+.contact1 .contact_main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+
+.contact1 .contact_main form .input p{
+    line-height: 25px;
+}
+
+.contact1 .contact_main form .input{
+    margin: 5px;
+}
+
+.contact1 .contact_main form .input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.contact1 .contact_main .input input:focus{
+    border: 2px solid #fa1d86;
+}
+
+.contact1 .contact_main form .input textarea{
+    width: 300px;
+   
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.contact1 .contact_main .input textarea:focus{
+    border: 2px solid #fa1d86;
+}
+
+.contact1 .contact_main form .input .contact_btn{
+   
+    background:#fa1d86;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.contact1 .contact_main form .contact_btn:hover{
+    color: #fa1d86;
+    background-color: white;
+    border: 2px solid #fa1d86;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+
+/*Team*/
+
+
+
+.team{
+    width: 100%;
+    height: 90vh;
+}
+
+.team h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+
+.team h1 span{
+    color: #fa1d86;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.team h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fa1d86;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.team .team_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.team .team_box .profile{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.team .team_box .profile img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+    top: 60%;
+}
+
+.team .team_box .profile .info .name{
+    color: #fa1d86;
+    margin-bottom: 15px;
+}
+
+.team .team_box .profile .info .bio{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.team .team_box .profile .info .team_icon i{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team .team_box .profile .info .team_icon i:hover{
+    color: #fa1d86;
+}
+
+
+
+  /* The main css code for home page ends here....  */
+
+
+
+
+   /* Footer css code starts here....*/
+
+  #me {
+    color: orange;
+}
+
+footer {
+    background-color:  #d2d2d2;;
+ }
+
+ .footer .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .footer .box-container .box h3 {
+    font-size: 2.2rem;
+    padding: 1rem ;
+    color: #000000;
+  }
+  
+  .footer .box-container .box a {
+    display: block;
+    font-size: 1rem;
+    padding: 1rem 0;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .footer .box-container .box a:hover {
+    color: #fa1d86;
+    font-weight: bold;
+  }
+  
+  .footer .box-container .box a:hover i {
+    padding-right: 0.7rem;
+    font-weight: bold;
+  }
+  
+  .footer .box-container .box a i {
+    color: #fa1d86;
+    padding-right: .5rem;
+  }
+  
+  .footer .credit {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #000000;
+    border-top: 0.2rem solid #fa1d86;
+  
+  }
+
+
+
